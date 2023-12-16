@@ -1,0 +1,2 @@
+# HVA-MINI-HACKATHON
+NewsAPI website
