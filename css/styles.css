@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #FFF; */
+    background: #FFF;
+}
+
+.container {
+    width: 1440px;
+    height: 2003px;
+    /* border: 2px solid #3C3030; */
+    background: #F8F8F4;
+}
+
+.frame-nineteen {
+    width: 1440px;
+    height: 1914px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    box-sizing: border-box;
+    /* border: 2px solid red;  */
+    margin-top: 32px;
+}
+
+.header {
+    width: 563px;
+    height: 118px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.red-ellipse {
+    width: 60.291px;
+    height: 60.291px;
+    background: #E84848;
+    border-radius: 50%;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.organization {
+    color: #3C3030;
+    font-size: 84px;
+    font-weight: 400;
+    line-height: 33.60px;
+    font-style: normal;
+    font-family: Iowan Old Style;
+}
+
+.horizontal-line {
+    width: 1440px;
+    height: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.dot {
+    width: 1440px;
+    height: 1px;
+    background: #3C3030;
+}
+
+.search-bar {
+    width: 327px;
+    height: 61px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--Dark, #373c30);
+    opacity: 1;
+}
+
+#searchInput {
+    flex: 1;
+    border: none;
+    padding: 0 10px;
+    font-size: 16px;
+    font-family: Iowan Old Style;
+    display: flex;
+    align-items: center;
+}
+
+#goSearch {
+    padding: 8px 7px 10px 30px;
+    border-radius: 1px;
+    /* border: 1px solid #E84848; */
+    background: #E84848;
+    cursor: pointer;
+    font-family: Iowan Old Style;
+    font-size: 16px;
+}
+
+.go-text{
+    color: var(--light, #FDFDFA);
+    font-family: Iowan Old Style;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px
+}
+
+.search-icon {
+    margin-right: 4px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.inner-container{
+    width: 930px;
+    height: 1387px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    /* border: 2px solid plum; */
+}
+
+.headline{
+
+    color: var(--Dark-Red, #D02424);
+    font-family: Inria Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px ;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+}
+
+.grid{
+    width: 930px;
+    height: 1334px;
+    /* border: 2px solid blueviolet; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 96px;
+}
+
+.row{
+    width: 930px;
+    height: 388px;
+    /* border: 2px solid mediumspringgreen; */
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.col{
+    width: 260px;
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* border: 2px solid darkorange; */
+    gap: 16px;
+}
+
+.footer{
+    width: 1440px;
+    height: 81px;
+    /* border: 2px solid fuchsia; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: flex-start; */
+    gap: 59px;
+}
+
+.bottom-line{
+    width: 1440px;
+    /* border:1px solid #3C3030; */
+}
+
+.footer-text{
+    width: 477px;
+    height: 22px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    /* border: 1px solid coral; */
+}
+
+.footer-logo{
+    width: 102px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+    gap: 2px;
+}
+
+#api{
+    color: var(--Dark, #3C3030);
+    font-family: Iowan Old Style;
+    font-size: 15.095px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 21.133px */
+}
+
+#elipse-logo{
+    width: 8.302px;
+    height: 8.302px;
+    background: #E84848;
+    border-radius: 70%;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.message{
+    color: var(--Dark, #3C3030);
+    /* font-family: Inria Serif; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+}
+
+#org{
+    color: var(--Dark, #3C3030);
+    font-family: Iowan Old Style;
+    font-size: 15.095px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.133px;
+}
+
+.image{
+    width: 245px;
+    height: 120px;
+    /* border: 2px solid #3C3030; */
+}
+
+.loadImages{
+    width: 245px;
+    height: 120px;
+    /* border: 2px solid purple; */
+}
+
+.title{
+    width: 250px;
+    color: var(--Dark, #3C3030);
+    font-family: Inknut Antiqua;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.72px;
+}
+
+.descriptionTitle{
+    width: 250px;
+    color: var(--Dark, #3C3030);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+    opacity: 0.8;
+} 
+
+.descriptionLink{
+    color: var(--Dark, #3C3030);
+    font-family: Inria Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+}
+
+
