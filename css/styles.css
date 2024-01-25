@@ -27,7 +27,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     /* border: 2px solid red;  */
     margin-top: 32px;
 }
@@ -38,14 +38,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1px;
     flex-direction: column;
     box-sizing: border-box;
 }
 
 .logo {
     display: flex;
-    align-items: center;
+    align-items:center;
     gap: 4px;
 }
 
@@ -61,15 +60,15 @@ body {
 .organization {
     color: #3C3030;
     font-size: 84px;
-    font-weight: 400;
-    line-height: 33.60px;
-    font-style: normal;
+    /* font-weight: 400; */
+    /* line-height: 33.60px; */
+    font-style:normal;
     font-family: Iowan Old Style;
 }
 
 .horizontal-line {
-    width: 1440px;
-    height: 8px;
+    /* width: 1440px;
+    height: 8px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,12 +96,13 @@ body {
     display: flex;
     align-items: center;
     border: 1px solid var(--Dark, #373c30);
-    opacity: 1;
 }
 
 #searchInput {
-    flex: 1;
+    /* flex: 1; */
     border: none;
+    /* border: 1px solid black;
+    border: none; */
     padding: 0 10px;
     font-size: 16px;
     font-family: Iowan Old Style;
@@ -117,16 +117,17 @@ body {
     background: #E84848;
     cursor: pointer;
     font-family: Iowan Old Style;
-    font-size: 16px;
+    /* font-size: 16px; */
 }
 
 .go-text{
     color: var(--light, #FDFDFA);
     font-family: Iowan Old Style;
-    font-size: 20px;
+    font-size: 22px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 28px
+    /* font-weight: 400; */
+    line-height: 28px;
+    padding-right: 12px;
 }
 
 .search-icon {
@@ -151,7 +152,6 @@ body {
     font-family: Inria Sans;
     font-size: 20px;
     font-style: normal;
-    font-weight: 400;
     line-height: 28px ;
     letter-spacing: -0.4px;
     text-transform: uppercase;
@@ -182,7 +182,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* border: 2px solid darkorange; */
+    border: 2px solid darkorange;
+    background-color: lightblue;
     gap: 16px;
 }
 
@@ -225,8 +226,7 @@ body {
     font-family: Iowan Old Style;
     font-size: 15.095px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 21.133px */
+    line-height: 120%; /* 21.133px */
 }
 
 #elipse-logo{
@@ -240,10 +240,9 @@ body {
 
 .message{
     color: var(--Dark, #3C3030);
-    /* font-family: Inria Serif; */
+    font-family: Inria Serif;
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
     line-height: 140%; /* 22.4px */
 }
 
@@ -252,7 +251,6 @@ body {
     font-family: Iowan Old Style;
     font-size: 15.095px;
     font-style: normal;
-    font-weight: 400;
     line-height: 21.133px;
 }
 
@@ -286,7 +284,7 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 140%; 
+    line-height: 120%; 
     opacity: 0.8;
 } 
 
@@ -296,7 +294,5 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 140%; /* 22.4px */
+    line-height: 120%; /* 22.4px */
 }
-
-
