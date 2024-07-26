@@ -1,59 +1,68 @@
-const goTab = document.getElementById('goSearch');
-const searchTab = document.getElementById('searchInput');
-const newsImages = document.querySelectorAll('.loadImages');
-const newsTitles = document.querySelectorAll('.title');
-const newsDescription = document.querySelectorAll('.description');
-const newUrl = document.getElementsByTagName('a');
+document.addEventListener('DOMContentLoaded', () => {
+    const goTab = document.getElementById('goSearch');
+    console.log(typeof(goTab));
+    const searchTab = document.getElementById('searchInput');
+    const newsImages = document.querySelectorAll('.loadImages');
+    const newsTitles = document.querySelectorAll('.title');
+    const newsDescriptions = document.querySelectorAll('.descriptionTitle');
+    const newUrls = document.querySelectorAll('.descriptionLink');
+    const prevPageBtn = document.getElementById('prevPage');
+    const nextPageBtn = document.getElementById('nextPage');
+    const pageNumberSpan = document.getElementById('pageNumber');
 
-const apiKey = "7bc36466cef54d26bbd835df2170fe9c";
+    const apiKey = "7bc36466cef54d26bbd835df2170fe9c";
+    let currentPage = 1;
+    let totalResults = 0;
 
-goTab.addEventListener("click", () => {
-    getData();
-});
+    const fetchData = async () => {
+        const inputValue = searchTab.value;
+        const url = `https://newsapi.org/v2/everything?q=${inputValue}&apiKey=${apiKey}&page=${currentPage}`;
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            totalResults = data.totalResults;
+            console.log('Total Results:', totalResults);
 
-searchTab.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-        getData();
-    }
-});
+            newsImages.forEach((img, index) => {
+                if (data.articles[index]) {
+                    img.src = data.articles[index].urlToImage || '';
+                    newsTitles[index].textContent = data.articles[index].title || '';
+                    newsDescriptions[index].textContent = data.articles[index].description || '';
+                    newUrls[index].href = data.articles[index].url || '#';
+                } else {
+                    img.src = '';
+                    newsTitles[index].textContent = '';
+                    newsDescriptions[index].textContent = '';
+                    newUrls[index].href = '#';
+                }
+            });
 
-async function getData() {
-    const inputValue = searchTab.value;
-    const url = `https://newsapi.org/v2/everything?q=${inputValue}&apiKey=${apiKey}`;
-    const newInfo = await fetch(url);
-    const newsData = await newInfo.json();
-    console.log(newsData);
-
-    let count = 0;
-    for (let i = 0; i < newsData.articles.length; i++) {
-        newsImages[i].src = newsData.articles[i].urlToImage;
-        newsTitles[i].innerHTML = newsData.articles[i].title;
-        newsDescription[i].innerHTML = newsData.articles[i].description;
-        newUrl[i].href = newsData.articles[i].url;
-        count++;
-        if (count === 9) {
-            break;
+            pageNumberSpan.innerText = `Page ${currentPage}`;
+            prevPageBtn.disabled = currentPage === 1;
+            nextPageBtn.disabled = currentPage * 9 >= totalResults;
+        } catch (error) {
+            console.error('Error fetching data:', error);
         }
-    }
-}
+    };
 
-    // const url = `https://newsapi.org/v2/everything?q=${inputValue}&apiKey=${apiKey}`;
-    // const newInfo = await fetch(url)
-    // const newsData = await newInfo.json();
-    // console.log(newsData);
+    goTab.addEventListener('click', fetchData);
+    searchTab.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            fetchData();
+        }
+    });
 
+    prevPageBtn.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            fetchData();
+        }
+    });
 
-    // let count = 0;
-    // for(let i=0; i<newsData.articles.length; i++){
-    //     // console.log(newsData.articles[i]);
-    //     newsImages[i].src=newsData.articles[i].urlToImage;
-    //     newsTitles[i].innerHTML =newsData.articles[i].title;
-    //     newsDescription[i].innerHTML =newsData.articles[i].description;
-    //     newUrl[i].href =newsData.articles[i].url;
-    //     count++;
-    //     if(count===9){
-    //         break;
-    //     }
-    // }
-
-
+    nextPageBtn.addEventListener('click', () => {
+        if (currentPage * 9 < totalResults) {
+            currentPage++;
+            fetchData();
+        }
+    });
+}); 
