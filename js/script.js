@@ -13,15 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const apiKey = "7bc36466cef54d26bbd835df2170fe9c";
     let currentPage = 1;
     let totalResults = 0;
+    let pageSize = 9
 
     const fetchData = async () => {
         const inputValue = searchTab.value;
-        const url = `https://newsapi.org/v2/everything?q=${inputValue}&apiKey=${apiKey}&page=${currentPage}`;
+        const url = `https://newsapi.org/v2/everything?q=${inputValue}&apiKey=${apiKey}&page=${currentPage}&pageSize=${pageSize}`;
         try {
             const response = await fetch(url);
             const data = await response.json();
             totalResults = data.totalResults;
-            console.log('Total Results:', totalResults);
+            console.log('Total Results:', totalResults, data.articles.length);
 
             newsImages.forEach((img, index) => {
                 if (data.articles[index]) {
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             pageNumberSpan.innerText = `Page ${currentPage}`;
             prevPageBtn.disabled = currentPage === 1;
-            nextPageBtn.disabled = currentPage * 9 >= totalResults;
+            nextPageBtn.disabled = currentPage * pageSize >= totalResults;
         } catch (error) {
             console.error('Error fetching data:', error);
         }
@@ -60,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     nextPageBtn.addEventListener('click', () => {
-        if (currentPage * 9 < totalResults) {
+        if (currentPage * pageSize < totalResults) {
             currentPage++;
             fetchData();
         }
