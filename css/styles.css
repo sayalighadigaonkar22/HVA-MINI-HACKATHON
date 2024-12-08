@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #c0eefe, #ddd57e, #c0eefe);
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.frame-nineteen {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.red-ellipse {
+    width: 60.291px;
+    height: 60.291px;
+    background: #E84848;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.organization {
+    color: #3C3030;
+    font-size: 84px;
+    font-style: normal;
+    font-family: Iowan Old Style;
+}
+
+.horizontal-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.dot {
+    width: 100%;
+    max-width: 1440px;
+    height: 1px;
+    background: #3C3030;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 327px;
+    height: 61px;
+    margin: 10px 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #373c30;
+}
+
+#searchInput {
+    border: none;
+    padding: 0 10px;
+    font-size: 16px;
+    font-family: Iowan Old Style;
+}
+
+#goSearch {
+    padding: 8px 7px 10px 30px;
+    border-radius: 1px;
+    background: #E84848;
+    cursor: pointer;
+    font-family: Iowan Old Style;
+}
+
+.go-text {
+    color: #FDFDFA;
+    font-family: Iowan Old Style;
+    font-size: 22px;
+    font-style: normal;
+    line-height: 28px;
+    padding-right: 12px;
+}
+
+.search-icon {
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.inner-container {
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    background: #241f1fcd;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.headline {
+    color: #D02424;
+    font-family: Inria Sans;
+    font-size: 26px;
+    font-style: normal;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+    /* margin-bottom: 5px; */
+
+}
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.col:hover {
+    transform: scale(1.05);
+}
+
+.image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.loadImages {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.title {
+    width: 100%;
+    color: #3C3030;
+    font-family: Inknut Antiqua;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.descriptionTitle {
+    width: 100%;
+    color: #3C3030;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    opacity: 0.8;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.descriptionLink {
+    color: #3C3030;
+    font-family: Inria Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-align: center;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 59px;
+    margin-top: 20px;
+}
+
+.bottom-line {
+    width: 100%;
+    max-width: 1440px;
+}
+
+.footer-text {
+    width: 100%;
+    max-width: 477px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+#api {
+    color: #3C3030;
+    font-family: Iowan Old Style;
+    font-size: 15.095px;
+    font-style: normal;
+    line-height: 120%;
+}
+
+#elipse-logo {
+    width: 8.302px;
+    height: 8.302px;
+    background: #E84848;
+    border-radius: 70%;
+    margin: 0 4px;
+}
+
+.message {
+    color: #3C3030;
+    font-family: Inria Serif;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 140%;
+}
+
+#org {
+    color: #3C3030;
+    font-family: Iowan Old Style;
+    font-size: 15.095px;
+    font-style: normal;
+    line-height: 21.133px;
+}
+
+.pagination {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    background-color: #E84848;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Iowan Old Style;
+    font-size: 16px;
+}
+
+.pagination button:disabled {
+    background-color: #CCC;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-family: Iowan Old Style;
+    font-size: 18px;
+    color: #3C3030;
+}
+
+#message{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
